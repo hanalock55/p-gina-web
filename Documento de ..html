@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los Renacidos - Podcast</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'xs': '480px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Encabezado -->
+  <header class="bg-gradient-to-r from-blue-900 via-gray-800 to-indigo-900 text-white p-6 fixed top-0 w-full z-50 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Los Renacidos</h1>
+      <div class="md:hidden">
+        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="hidden md:flex space-x-4 text-sm md:text-base">
+        <a href="#inicio" class="hover:text-gray-300">Inicio</a>
+        <a href="#java" class="hover:text-gray-300">Sentencias de Control</a>
+        <a href="#if" class="hover:text-gray-300">If / Else</a>
+        <a href="#switch" class="hover:text-gray-300">Switch</a>
+        <a href="#bucles" class="hover:text-gray-300">Bucles</a>
+        <a href="#temas" class="hover:text-gray-300">Temas del Podcast</a>
+        <a href="#sobre" class="hover:text-gray-300">Sobre</a>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-2 bg-indigo-800">
+      <a href="#inicio" class="block py-2 text-white hover:text-gray-300">Inicio</a>
+      <a href="#java" class="block py-2 text-white hover:text-gray-300">Sentencias de Control</a>
+      <a href="#if" class="block py-2 text-white hover:text-gray-300">If / Else</a>
+      <a href="#switch" class="block py-2 text-white hover:text-gray-300">Switch</a>
+      <a href="#bucles" class="block py-2 text-white hover:text-gray-300">Bucles</a>
+      <a href="#temas" class="block py-2 text-white hover:text-gray-300">Temas del Podcast</a>
+      <a href="#sobre" class="block py-2 text-white hover:text-gray-300">Sobre</a>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <!-- Inicio -->
+    <section id="inicio" class="py-16 text-center bg-white" data-sr>
+      <div class="container mx-auto px-6">
+        <img src="C:\Users\gilbe\Downloads\59ycedcq.png" alt="Banner Podcast" class="mx-auto rounded-lg shadow-md mb-6">
+        <h2 class="text-4xl font-bold mb-4">Podcast "Los Renacidos"</h2>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+          Página dedicada a la enseñanza de sentencias de control en JAVA a través de episodios claros, dinámicos y educativos.
+        </p>
+      </div>
+    </section>
+
+    <!-- Video principal -->
+    <div class="aspect-w-16 aspect-h-9 mb-10 px-6" data-sr>
+      <iframe class="w-full h-96 mx-auto rounded-lg shadow" src="https://www.youtube.com/embed/E8weQyNVWug" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Sentencias de Control en Java -->
+    <section id="java" class="py-16 bg-gray-100" data-sr>
+      <div class="container mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-8">¿Qué son las Sentencias de Control en Java?</h3>
+        <p class="text-gray-700 text-center max-w-3xl mx-auto mb-6">
+          Son estructuras que permiten controlar el flujo de ejecución del código según condiciones específicas. Estas sentencias son esenciales para tomar decisiones, repetir acciones y manejar el comportamiento lógico de las aplicaciones.
+        </p>
+        <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_logo_icon_146458.png" alt="Java Flowchart" class="rounded-lg shadow mx-auto max-w-3xl">
+      </div>
+    </section>
+
+    <!-- If / Else -->
+    <section id="if" class="py-16 bg-white" data-sr>
+      <div class="container mx-auto px-6">
+        <h3 class="text-2xl font-bold text-center mb-4">Sentencia If / Else</h3>
+        <p class="text-gray-700 max-w-2xl mx-auto text-center">
+          Ejecuta un bloque de código si una condición es verdadera, y otro bloque si no lo es.
+        </p>
+        <pre class="bg-gray-800 text-green-200 text-sm p-4 mt-6 rounded-lg shadow-md max-w-2xl mx-auto overflow-x-auto">
+if (edad >= 18) {
+  System.out.println("Eres mayor de edad");
+} else {
+  System.out.println("Eres menor de edad");
+}</pre>
+      </div>
+    </section>
+
+    <!-- Switch -->
+    <section id="switch" class="py-16 bg-gray-100" data-sr>
+      <div class="container mx-auto px-6">
+        <h3 class="text-2xl font-bold text-center mb-4">Sentencia Switch</h3>
+        <p class="text-gray-700 max-w-2xl mx-auto text-center">
+          Elige entre múltiples bloques de código según el valor de una variable.
+        </p>
+        <pre class="bg-gray-800 text-green-200 text-sm p-4 mt-6 rounded-lg shadow-md max-w-2xl mx-auto overflow-x-auto">
+switch(dia) {
+  case 1:
+    System.out.println("Lunes");
+    break;
+  case 2:
+    System.out.println("Martes");
+    break;
+  default:
+    System.out.println("Otro día");
+}</pre>
+      </div>
+    </section>
+
+    <!-- Bucles -->
+    <section id="bucles" class="py-16 bg-white" data-sr>
+      <div class="container mx-auto px-6">
+        <h3 class="text-2xl font-bold text-center mb-4">Bucles: For, While y Do-While</h3>
+        <p class="text-gray-700 max-w-2xl mx-auto text-center">
+          Repite una acción mientras se cumpla una condición.
+        </p>
+        <pre class="bg-gray-800 text-green-200 text-sm p-4 mt-6 rounded-lg shadow-md max-w-2xl mx-auto overflow-x-auto">
+for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}
+
+int i = 0;
+while (i < 5) {
+  System.out.println(i);
+  i++;
+}
+
+i = 0;
+do {
+  System.out.println(i);
+  i++;
+} while (i < 5);
+</pre>
+      </div>
+    </section>
+
+    <!-- Temas del Podcast -->
+    <section id="temas" class="py-16 bg-gray-100" data-sr>
+      <div class="container mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-8">Temas del Podcast</h3>
+        <ul class="list-disc list-inside text-gray-700 max-w-2xl mx-auto text-left space-y-2">
+          <li>Sentencias de control: if, else, switch, bucles</li>
+          <li>Errores comunes al programar estructuras de control</li>
+          <li>Recomendaciones para principiantes en Java</li>
+          <li>Experiencias reales de estudiantes</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sobre el Podcast -->
+    <section id="sobre" class="py-16 bg-white" data-sr>
+      <div class="container mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-4">Sobre "Los Renacidos"</h3>
+        <p class="text-gray-700 max-w-2xl mx-auto mb-6">
+          Un podcast educativo creado por estudiantes, con la misión de explicar la lógica de programación en Java de forma simple, amena y clara para todos.
+        </p>
+         <iframe class="w-full h-96 mx-auto rounded-lg shadow" src="C:\Users\gilbe\Downloads\lv_0_20250422203534.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-blue-900 via-gray-900 to-indigo-900 text-white text-center py-6">
+    <p>© 2025 Los Renacidos. Todos los derechos reservados.</p>
+    <p><a href="https://losrenacidos.dev" class="underline hover:text-purple-300">www.losrenacidos.dev</a> — Sitio exclusivo del podcast</p>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('[data-sr]', {
+      duration: 1000,
+      origin: 'bottom',
+      distance: '50px',
+      easing: 'ease-in-out',
+      reset: false
+    });
+  </script>
+</body>
+</html>
